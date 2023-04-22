@@ -13,6 +13,9 @@
     --color-white: #FFFFFF;
 
     --modal-inx: 100;
+
+    --anim-fast: 400ms ease-in;
+    --anim-slow: 1000ms ease-in-out;
 }
 body {
         font-family: 'Roboto', sans-serif;
@@ -458,6 +461,8 @@ background: #FFFFFF;
 
     background: #4D5AE5;
     transition: transform 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 
 }
 .overlay-text{
@@ -568,7 +573,7 @@ background: #FFFFFF;
     }
 
 /* Modal styles */
-/* .backdrop { */
+.backdrop {
     position: fixed;
 
     left: 0;
@@ -579,26 +584,56 @@ background: #FFFFFF;
 
     z-index: var(--modal-inx);
 
-    background-color: rgba(46, 47, 66, 0.4);;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity var(--anim-fast), visibility var(--anim-fast);
+
+   
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-delay: 400ms;
+}
+.backdrop.is-hidden.modal {
+    transform: translate(-50%, -50%); 
+    opacity: 0;
 }
 .modal {
     position: absolute;
-    top: calc(50% - 292px);
-    left: calc(50% - 204px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+
     width: 408px;
     min-height: 584px;
     padding: 24px;
-   
 
     background-color: #FCFCFC;
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transition: transform 200ms ease-in 200ms, opacity 200ms ease-in 200ms;
+   
 }
 .modal-btn {
+    position: absolute;
     display: block;
-    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    left: 360px;
+    top: 24px;
+    color: var(--color-naviblue);
+    background-color: var(--color-cornflower);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+   
 }
+
 .modal-icon {
+
 }
   
   
