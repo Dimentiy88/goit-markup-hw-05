@@ -489,7 +489,7 @@ background: #FFFFFF;
 
     background: #4D5AE5;
 
-    transition-property: color, background-color;
+    transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
