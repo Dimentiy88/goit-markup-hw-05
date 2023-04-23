@@ -78,6 +78,10 @@ img {
     color: var(--color-iris);
     letter-spacing: 0.03em;
     margin-right: 76px;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list {
     position: relative;
@@ -91,6 +95,10 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-navi-blue-modal);
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list::after {
@@ -132,6 +140,10 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-slate);
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -193,6 +205,10 @@ img {
     min-width: 169px;
     display: block;
     margin: 0 auto;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  } 
  .button-btn {
     background-color: var(--color-cloud);
@@ -206,6 +222,10 @@ img {
     cursor: pointer;
     padding: 12px 24px;
     border: 1px solid var(--color-cornflower);
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
 .button-link:hover,
 .button-link:focus {
@@ -304,6 +324,10 @@ background: #FFFFFF;
     height: 100%;
     background-color: var(--color-iris) ;
     border-radius: 50%;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -385,6 +409,10 @@ background: #FFFFFF;
     letter-spacing: 0.03em;
     margin-bottom: 16px;
     display: inline-block;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .bottom{
@@ -460,9 +488,10 @@ background: #FFFFFF;
     padding: 40px 32px 164px 32px;
 
     background: #4D5AE5;
-    transition: transform 250ms;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
 
 }
 .overlay-text{
@@ -547,6 +576,10 @@ background: #FFFFFF;
     align-items: center;
     justify-content: center;
     color: var(--color-light-slate);
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
   }
   .customers-icon {
@@ -603,7 +636,7 @@ background: #FFFFFF;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 
     width: 408px;
@@ -613,26 +646,50 @@ background: #FFFFFF;
     background-color: #FCFCFC;
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-
-    transition: transform 200ms ease-in 200ms, opacity 200ms ease-in 200ms;
-   
+    
+    transition: transform 200ms ease-in 200ms, opacity 200ms ease-in 200ms ;
+    
 }
 .modal-btn {
     position: absolute;
-    display: block;
+    top: 24px;
+    right: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
     width: 24px;
     height: 24px;
-    left: 360px;
-    top: 24px;
-    color: var(--color-naviblue);
-    background-color: var(--color-cornflower);
-    border: none;
     border-radius: 50%;
-    cursor: pointer;
+
+    color: var(--color-navi-blue-modal);
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
    
 }
 
 .modal-icon {
+    fill: currentColor;
+    width: 8px;
+    height: 8px;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+    background: #404BBF;
+    
+}
+
+.modal-btn:hover .modal-icon,
+.modal-btn:focus .modal-icon {
+    fill: var(--color-white);
 
 }
   
