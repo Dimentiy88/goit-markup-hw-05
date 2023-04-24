@@ -48,8 +48,10 @@ img {
     margin: 0;
     display: flex;
     gap: 40px;
+
     
 }
+
 .button-link,
 .button-link-btn,
 .button-btn {
@@ -96,7 +98,7 @@ img {
     letter-spacing: 0.02em;
     color: var(--color-navi-blue-modal);
 
-    transition-property: color, background-color;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -111,10 +113,11 @@ img {
     height: 4px;
     left: 0px;
 
+
 }
 
 .nav-list.current::after {
-    background-color: var(--color-ocean);
+    background-color: #681da8;
 
 }
 
@@ -141,7 +144,7 @@ img {
     letter-spacing: 0.02em;
     color: var(--color-slate);
 
-    transition-property: color, background-color;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -150,6 +153,7 @@ img {
 .link:focus {
     color: var(--color-ocean);
 }
+
 .header-container {
     padding: 0 15px;
     margin: 0 auto;
@@ -206,7 +210,7 @@ img {
     display: block;
     margin: 0 auto;
 
-    transition-property: color, background-color;
+    transition-property: box-shadow, background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  } 
@@ -223,7 +227,7 @@ img {
     padding: 12px 24px;
     border: 1px solid var(--color-cornflower);
 
-    transition-property: color, background-color;
+    transition-property: color, background-color, box-shadow, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
@@ -231,6 +235,7 @@ img {
 .button-link:focus {
     color: var(--color-white);
     background-color:#404BBF;
+
 }
 .button-btn:hover,
 .button-btn:focus {
@@ -325,7 +330,7 @@ background: #FFFFFF;
     background-color: var(--color-iris) ;
     border-radius: 50%;
 
-    transition-property: color, background-color;
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -474,9 +479,12 @@ background: #FFFFFF;
     position: relative;
     overflow: hidden;
 }
-.our-work:hover .overlay{
+
+.card-link:hover .overlay,
+.card-link:focus .overlay{
     transform: translateY(0%);
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -576,8 +584,9 @@ background: #FFFFFF;
     align-items: center;
     justify-content: center;
     color: var(--color-light-slate);
+    
 
-    transition-property: color, background-color;
+    transition-property: color, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -692,9 +701,10 @@ background: #FFFFFF;
     fill: var(--color-white);
 
 }
-  
+
   
 
+  
 
 
 
